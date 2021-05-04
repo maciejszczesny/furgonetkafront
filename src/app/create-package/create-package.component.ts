@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-create-package',
@@ -9,12 +10,13 @@ import { FormControl } from '@angular/forms';
 export class CreatePackageComponent implements OnInit {
   name = new FormControl('Test name');
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
 
   createPackage(): void {
+    this.http.get<any>('http://localhost:8080/packages').subscribe();
     console.log('Sending package');
   }
 

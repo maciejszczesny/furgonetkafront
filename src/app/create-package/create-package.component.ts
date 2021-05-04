@@ -14,4 +14,8 @@ export class CreatePackageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  createPackage(): void {
+    console.log('Sending package');
+  }
+
 }

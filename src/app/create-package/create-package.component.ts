@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./create-package.component.css']
 })
 export class CreatePackageComponent implements OnInit {
-  name = new FormControl('Test name');
+  name = new FormControl();
 
   constructor(private http: HttpClient) { }
 

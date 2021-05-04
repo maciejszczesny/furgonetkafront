@@ -1,8 +1,19 @@
-<h1>Create new package form</h1>
+<!--<h1>Create new package form</h1>
 <label>
   Name:
   <input type="text" [formControl]="name">
+  &lt;!&ndash;<input type="text" [formControl]="Surname">   &ndash;&gt;
 </label>
-<button (click)="createPackage()">Submit package</button>
+<br>
+<br>
+<button (click)="createPackage()">Submit package</button>-->
+
+<div class="col-sm-6">
+  <label for="firstName" class="form-label">First name</label>
+  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+  <div class="invalid-feedback">
+    Valid first name is required.
+  </div>
+</div>
 
 

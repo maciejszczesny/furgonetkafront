@@ -5,9 +5,8 @@ import {CreatePackageComponent} from "../create-package/create-package.component
 import {Routes, RouterModule} from "@angular/router";
 
 const routes: Routes = [
-  { path: 'CreatePackageComponent', component: CreatePackageComponent},
-  { path: 'CourierComponent', component: CourierComponent},
-
+  { path: 'create', component: CreatePackageComponent},
+  { path: 'courier', component: CourierComponent}
 ];
 
 @NgModule({

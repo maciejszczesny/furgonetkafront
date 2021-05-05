@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CreatePackageComponent } from './create-package/create-package.component';
 import { CourierComponent } from './courier/courier.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -16,10 +17,13 @@ import { CourierComponent } from './courier/courier.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: 'create', component: CreatePackageComponent},
+      { path: 'courier', component: CourierComponent}
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]

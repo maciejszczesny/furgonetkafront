@@ -1,7 +1,24 @@
-<div id="package-form">
-  <app-create-package></app-create-package>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <ul class="nav nav-tabs">
+        <li role="presentation"><a routerLink="create">Create Package</a></li>
+        <li role="presentation"><a routerLink="courier">Courier</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
 
-<div id="courier-page">
-  <app-courier></app-courier>
-</div>
+
+<!--<div id="package-form">-->
+<!--  <app-create-package></app-create-package>-->
+<!--</div>-->
+
+<!--<div id="courier-page">-->
+<!--  <app-courier></app-courier>-->
+<!--</div>-->

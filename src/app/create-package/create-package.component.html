@@ -24,62 +24,69 @@
 </div>
 
 
-<div class="col-12">
-  <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-  <input type="email" class="form-control" id="email" placeholder="you@example.com">
-  <div class="invalid-feedback">
-    Please enter a valid email address for shipping updates.
-  </div>
-</div>
+<!--<div class="col-12">-->
+<!--  <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>-->
+<!--  <input type="email" class="form-control" id="email" placeholder="you@example.com">-->
+<!--  <div class="invalid-feedback">-->
+<!--    Please enter a valid email address for shipping updates.-->
+<!--  </div>-->
+<!--</div>-->
 
-<div class="col-12">
-  <label for="address" class="form-label">Adres</label>
-  <input type="text" class="form-control" id="address" placeholder="Miejscowosc, ulica, numer domu" required formControlName="address">
-  <div class="invalid-feedback">
-    Please enter your shipping address.
-  </div>
-</div>
+<!--<div class="col-12">-->
+<!--  <label for="address" class="form-label">Adres</label>-->
+<!--  <input type="text" class="form-control" id="address" placeholder="Miejscowosc, ulica, numer domu" required formControlName="address">-->
+<!--  <div class="invalid-feedback">-->
+<!--    Please enter your shipping address.-->
+<!--  </div>-->
+<!--</div>-->
 
-<div class="col-12">
-  <label for="address2" class="form-label">Adres 2 <span class="text-muted">(Opcjonalnie)</span></label>
-  <input type="text" class="form-control" id="address2" placeholder="Adres cd.">
-</div>
+<!--<div class="col-12">-->
+<!--  <label for="address2" class="form-label">Adres 2 <span class="text-muted">(Opcjonalnie)</span></label>-->
+<!--  <input type="text" class="form-control" id="address2" placeholder="Adres cd.">-->
+<!--</div>-->
 
-<div class="col-md-5">
-  <label for="country" class="form-label">Kraj</label>
-  <select class="form-select" id="country" required formControlName="country">
-    <option value="">Choose...</option>
-    <option>USA</option>
-    <option>Polska</option>
-    <option>Niemcy</option>
-    <option>Rosja</option>
-  </select>
-  <div class="invalid-feedback">
-    Please select a valid country.
-  </div>
-</div>
+<!--<div class="col-md-5">-->
+<!--  <label for="country" class="form-label">Kraj</label>-->
+<!--  <select class="form-select" id="country" required formControlName="country">-->
+<!--    <option value="">Choose...</option>-->
+<!--    <option>USA</option>-->
+<!--    <option>Polska</option>-->
+<!--    <option>Niemcy</option>-->
+<!--    <option>Rosja</option>-->
+<!--  </select>-->
+<!--  <div class="invalid-feedback">-->
+<!--    Please select a valid country.-->
+<!--  </div>-->
+<!--</div>-->
 
-<div class="col-sm-6">
-  <label for="startPoint" class="form-label">Punkt początkowy</label>
-  <input type="text" class="form-control" id="startPoint" placeholder="" value="" required formControlName="startPoint">
-  <div class="invalid-feedback">
-    Valid first name is required.
-  </div>
-</div>
+<!--<div class="col-sm-6">-->
+<!--  <label for="startPoint" class="form-label">Punkt początkowy</label>-->
+<!--  <input type="text" class="form-control" id="startPoint" placeholder="" value="" required formControlName="startPoint">-->
+<!--  <div class="invalid-feedback">-->
+<!--    Valid first name is required.-->
+<!--  </div>-->
+<!--</div>-->
 
-<div class="col-sm-6">
-  <label for="endPoint" class="form-label">Punkt końcowy</label>
-   <input type="text" class="form-control" id="endPoint" placeholder="" value="" required formControlName="endPoint">
-  <div class="invalid-feedback">
-    Valid first name is required.
-  </div>
-</div>
+<!--<div class="col-sm-6">-->
+<!--  <label for="endPoint" class="form-label">Punkt końcowy</label>-->
+<!--   <input type="text" class="form-control" id="endPoint" placeholder="" value="" required formControlName="endPoint">-->
+<!--  <div class="invalid-feedback">-->
+<!--    Valid first name is required.-->
+<!--  </div>-->
+<!--</div>-->
 
 
   <button type="submit" [disabled]="!profileForm.valid">Submit</button>
 </form>
 <br>
 <button (click)="createPackage()">Submit package</button>
+
+
+<button (click)="getAllPackages()">Show packages</button>
+<br>
+<span *ngFor="let package of packages">
+  {{package}}
+</span>
 
 
 

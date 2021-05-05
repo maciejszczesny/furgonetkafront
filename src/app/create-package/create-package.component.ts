@@ -45,5 +45,6 @@ export class CreatePackageComponent implements OnInit {
 
   get dataPackage(): FormArray {
     return this.profileForm.get("COS TAKIEGO") as FormArray
+    this.http.get
   }
 }

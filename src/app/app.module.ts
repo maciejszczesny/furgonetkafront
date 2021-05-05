@@ -6,11 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CreatePackageComponent } from './create-package/create-package.component';
+import { CourierComponent } from './courier/courier.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreatePackageComponent
+    CreatePackageComponent,
+    CourierComponent
   ],
   imports: [
     BrowserModule,

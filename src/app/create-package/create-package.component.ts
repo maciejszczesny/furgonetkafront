@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import {FormArray, FormBuilder, FormControl, FormGroup} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import {all} from "codelyzer/util/function";
 
 @Component({
   selector: 'app-create-package',
@@ -8,9 +9,27 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./create-package.component.css']
 })
 export class CreatePackageComponent implements OnInit {
-  name = new FormControl();
+  /*  profileForm = new FormGroup({
+      firstName : new FormControl(''),
+      lastName  : new FormControl(''),
+      address     : new FormControl(''),
+      country : new FormControl(''),
+      startPoint : new FormControl(''),
+      endPoint : new FormControl(''),*/
 
-  constructor(private http: HttpClient) { }
+  /*});*/
+
+  profileForm = this.fb.group(
+    {
+      firstName: [''],
+      lastName: [''],
+      address: [''],
+      country: [''],
+      startPoint: [''],
+      endPoint: [''],
+});
+
+  constructor(private http: HttpClient, private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
@@ -20,4 +39,11 @@ export class CreatePackageComponent implements OnInit {
     console.log('Sending package');
   }
 
+  onSubmit() {
+    console.warn(this.profileForm.value);
+  }
+
+  get dataPackage(): FormArray {
+    return this.profileForm.get("COS TAKIEGO") as FormArray
+  }
 }

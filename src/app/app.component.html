@@ -1,24 +1,39 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <ul class="nav nav-tabs">
-        <li role="presentation"><a routerLink="create">Create Package</a></li>
-        <li role="presentation"><a routerLink="courier">Courier</a></li>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar w/ text</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="create">Create Package</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="courier">Courier</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
       </ul>
+      <span class="navbar-text">
+        Navbar text with an inline element
+      </span>
     </div>
   </div>
+</nav>
+
+
+<div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <router-outlet></router-outlet>
-    </div>
+        <div class="col-1"></div>
+        <div class="col-10">
+          <router-outlet></router-outlet>
+        </div>
+        <div class="col-1"></div>
+        <!-- Force next columns to break to new line at md breakpoint and up -->
   </div>
 </div>
 
 
-<!--<div id="package-form">-->
-<!--  <app-create-package></app-create-package>-->
-<!--</div>-->
-
-<!--<div id="courier-page">-->
-<!--  <app-courier></app-courier>-->
-<!--</div>-->

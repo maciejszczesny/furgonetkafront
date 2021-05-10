@@ -1,14 +1,15 @@
-<p>courier works!</p>
-<br>
-<br><br>
-<h1>Angular Router App</h1>
-<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
-<nav>
-  <ul>
-    <li><a routerLink="/CreatePackageComponent" routerLinkActive="active">Create Package Component</a></li>
-    <li><a routerLink="/CourierComponent" routerLinkActive="active">Courier component</a></li>
-  </ul>
-</nav>
-<!-- The routed views render in the <router-outlet>-->
-<router-outlet></router-outlet>
 
+
+<div class="card text-center mt-2 mb-2" *ngFor="let package of packages;let i = index">
+  <div class="card-header">
+    Paczka nr {{package.id}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Imię: {{package.firstName}}</h5>
+    <p class="card-text"> Nazwisko: {{package.lastName}}</p>
+    <a class="btn btn-danger" (click)="pickupPackage(package.id)">Zabierz paczke</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>

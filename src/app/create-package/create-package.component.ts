@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {FormArray, FormBuilder, FormControl, FormGroup} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import {all} from "codelyzer/util/function";
-import {Package} from "./Package";
 
 @Component({
   selector: 'app-create-package',
@@ -10,7 +9,7 @@ import {Package} from "./Package";
   styleUrls: ['./create-package.component.css']
 })
 export class CreatePackageComponent implements OnInit {
-  packages: [];
+
   /*  profileForm = new FormGroup({
       firstName : new FormControl(''),
       lastName  : new FormControl(''),
@@ -37,9 +36,6 @@ export class CreatePackageComponent implements OnInit {
   }
 
   createPackage(): void {
-    // const package = new Package(this.profileForm)
-    // this.http.get<any>('http://localhost:8080/packages').subscribe();
-
     console.log('Sending package');
   }
 
@@ -50,14 +46,7 @@ export class CreatePackageComponent implements OnInit {
     // console.log(this.profileForm['lastName'].value);
   }
 
-  getAllPackages() {
-    this.http.get<any>('http://localhost:8080/packages').subscribe((data) => {
-      this.packages = data;
-      console.log(data);
-    });
-    // console.log(this.profileForm['firstName'].value);
-    // console.log(this.profileForm['lastName'].value);
-  }
+
 
   // get dataPackage(): FormArray {
   //   return this.profileForm.get("COS TAKIEGO") as FormArray

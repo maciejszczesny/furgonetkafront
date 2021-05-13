@@ -6,14 +6,14 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CreatePackageComponent } from './create-package/create-package.component';
-import { CourierComponent } from './courier/courier.component';
 import {RouterModule} from "@angular/router";
+import { CheckPackageComponent } from './check-package/check-package.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreatePackageComponent,
-    CourierComponent
+    CheckPackageComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +22,7 @@ import {RouterModule} from "@angular/router";
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'create', component: CreatePackageComponent},
-      { path: 'courier', component: CourierComponent}
+      { path: 'check-package', component: CheckPackageComponent}
     ]),
   ],
   providers: [],

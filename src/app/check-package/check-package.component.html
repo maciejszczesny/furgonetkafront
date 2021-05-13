@@ -1,0 +1,30 @@
+
+
+
+<div class="col-sm-6">
+  <label for="clientNumber" class="form-label">Numer telefonu</label>
+  <input type="number" class="form-control" id="clientNumber" placeholder="" [(ngModel)]="clientNumber">
+  <button type="submit" class="btn btn-success mt-5 " (click)="getAllPackages()">Submit</button>
+
+  <div class="invalid-feedback">
+    Valid NUmber is required.
+  </div>
+</div>
+
+
+<div class="card text-center mt-2 mb-2" *ngFor="let package of myPackages;let i = index">
+  <div class="card-header">
+    Paczka nr {{package.id}}
+  </div>
+
+
+  <div class="card-body">
+    <h5 class="card-title">Imię: {{package.firstName}}</h5>
+    <p class="card-text"> Nazwisko: {{package.lastName}}</p>
+  </div>
+  <div class="card-footer text-muted">
+    footer
+  </div>
+
+</div>
+

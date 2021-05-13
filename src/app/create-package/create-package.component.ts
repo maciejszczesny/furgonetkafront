@@ -23,7 +23,8 @@ export class CreatePackageComponent implements OnInit {
   profileForm = this.fb.group(
     {
       firstName: [''],
-      lastName: ['']
+      lastName: [''],
+      clientNumber: ['']
       // address: [''],
       // country: [''],
       // startPoint: [''],

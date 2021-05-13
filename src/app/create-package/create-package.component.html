@@ -17,8 +17,15 @@
   </div>
 </div>
 
+  <div class="col-sm-6">
+    <label for="clientNumber" class="form-label">Numer telefonu</label>
+    <input type="number" class="form-control" id="clientNumber" placeholder="" value="" required formControlName="clientNumber">
+    <div class="invalid-feedback">
+      Valid NUmber is required.
+    </div>
+  </div>
 
-  <button type="submit" class="btn btn-success" [disabled]="!profileForm.valid">Submit</button>
+  <button type="submit" class="btn btn-success mt-5"  [disabled]="!profileForm.valid">Submit</button>
 </form>
 <br>
 <button (click)="createPackage()">Submit package</button>
